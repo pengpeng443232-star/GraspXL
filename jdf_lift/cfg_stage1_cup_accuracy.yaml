@@ -1,0 +1,22 @@
+environment:
+  curriculum_stage: 1
+  num_envs: 640
+  episode_length_s: 5.0
+  decimation: 2
+  arm_action_scale: 0.02
+  hand_stiffness: 5.0
+  goal_height_offset: 0.10
+  goal_epsilon: 0.02
+  z_drop_threshold: 0.06
+  max_palm_x_env: 0.35
+  max_palm_y_env: 0.55
+  joint_velocity_limit: 50.0
+  object_escape_distance: 0.8
+  transition_budget: 5000000
+  require_contact_for_lift: true
+  jdf_surface_samples: 256
+  jdf_distance_temperature: 0.025
+  jdf_accuracy_rew_scale: 4.0
+  stable_contact_rew_scale: 1.0
+ppo: {horizon_length: 32, minibatch_size: 4096, mini_epochs: 5, learning_rate: 0.0003, save_frequency: 25}
+
